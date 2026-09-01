@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="OpsDesk" />
+  <meta name="description" content="OpsDesk is a private, browser-based daily operations workbench for tasks, support cases, analytics issues, decisions, blockers, and status updates." />
+  <meta name="keywords" content="SupportOps, task manager, analytics workflow, ticket management, daily operations, project management, local-first" />
+  <meta property="og:title" content="OpsDesk | Daily Operations Workbench" />
+  <meta property="og:description" content="A local-first workspace for operational tasks, support cases, analytics issues, blockers, decisions, and status updates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andrejglavnik.github.io/projects/opsdesk/" />
+  <meta property="og:image" content="https://andrejglavnik.github.io/assets/img/opsdesk-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>OpsDesk | Daily Operations Workbench</title>
+  <link rel="canonical" href="https://andrejglavnik.github.io/projects/opsdesk/" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="shared/project.css?v=20260719-sync" />
+  <link rel="stylesheet" href="app.css?v=20260719-sync" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"OpsDesk","applicationCategory":"BusinessApplication","operatingSystem":"Web browser","author":{"@type":"Person","name":"Andrej Glavnik","url":"https://andrejglavnik.github.io/"},"description":"A local-first daily operations workbench for tasks, support cases, analytics issues, decisions, blockers, and status updates.","url":"https://andrejglavnik.github.io/projects/opsdesk/"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#opsdesk-content">Skip to workspace</a>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="app-brand" href="https://andrejglavnik.github.io/#builds" aria-label="Back to Andrej Glavnik portfolio">
+        <span class="app-mark">OD</span>
+        <span>OpsDesk</span>
+      </a>
+      <nav class="app-nav" aria-label="OpsDesk views">
+        <a href="#focus" data-view-link="focus" aria-current="page">Focus</a>
+        <a href="#board" data-view-link="board">Board</a>
+        <a href="#todo" data-view-link="todo">To-do</a>
+        <a href="#updates" data-view-link="updates">Updates</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-button role="switch" aria-checked="false" aria-label="Dark mode" title="Switch to dark mode">
+          <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+          <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+          <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a class="button small ghost app-switch-link" href="https://andrejglavnik.github.io/projects/syncdesk/" title="Open the connected data knowledge workspace">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4.97 0 9 1.34 9 3s-4.03 3-9 3-9-1.34-9-3 4.03-3 9-3Z"></path><path d="M3 6v6c0 1.66 4.03 3 9 3s9-1.34 9-3V6"></path><path d="M3 12v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"></path></svg>
+          <span>SyncDesk</span>
+        </a>
+        <a class="button small ghost" href="https://andrejglavnik.github.io/#builds">Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="opsdesk-content" class="app-shell" tabindex="-1">
+    <section class="workspace-heading" aria-labelledby="workspace-title">
+      <div>
+        <p class="eyebrow">Daily operations</p>
+        <h1 id="workspace-title">Keep the work moving.</h1>
+        <p>Tasks, technical issues, decisions, blockers, and handoffs in one private workspace.</p>
+      </div>
+      <div class="button-row">
+        <button class="local-badge local-badge-button" type="button" data-storage-guide>Local only</button>
+        <button class="button ghost" type="button" data-export-report aria-label="Export a work report or complete workspace backup">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
+          <span>Export report</span>
+        </button>
+        <button class="button primary" type="button" data-new-item>New item</button>
+      </div>
+    </section>
+
+    <section class="quick-capture" aria-label="Quick capture">
+      <form data-quick-form>
+        <label class="visually-hidden" for="quick-title">Quick capture</label>
+        <input id="quick-title" class="quick-input" name="title" type="text" maxlength="140" placeholder="Capture a task, issue, follow-up, or decision" autocomplete="off" />
+        <select class="quick-select" name="type" aria-label="Item type">
+          <option value="task">Task</option>
+          <option value="ticket">Ticket</option>
+          <option value="analytics">Analytics issue</option>
+          <option value="follow-up">Follow-up</option>
+          <option value="decision">Decision</option>
+        </select>
+        <button class="button primary" type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="metrics" aria-label="Workspace metrics">
+      <article class="metric"><strong data-metric-focus>0</strong><span>Today focus</span></article>
+      <article class="metric is-warning"><strong data-metric-due>0</strong><span>Due or overdue</span></article>
+      <article class="metric is-danger"><strong data-metric-blocked>0</strong><span>Blocked</span></article>
+      <article class="metric is-success"><strong data-metric-done>0</strong><span>Done this week</span></article>
+    </section>
+
+    <div class="ops-layout">
+      <aside class="ops-sidebar" aria-label="Workspace controls">
+        <div class="sidebar-section">
+          <p class="sidebar-label">Views</p>
+          <button class="sidebar-link active" type="button" data-view-button="focus"><span>Focus</span><strong data-count-focus>0</strong></button>
+          <button class="sidebar-link" type="button" data-view-button="board"><span>Board</span><strong data-count-open>0</strong></button>
+          <button class="sidebar-link" type="button" data-view-button="todo"><span>To-do</span><strong data-count-todo>0</strong></button>
+          <button class="sidebar-link" type="button" data-view-button="updates"><span>Updates</span><strong data-count-done>0</strong></button>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-label">Templates</p>
+          <button class="template-button" type="button" data-template="analytics">Analytics discrepancy</button>
+          <button class="template-button" type="button" data-template="support">Support escalation</button>
+          <button class="template-button" type="button" data-template="project">Project follow-up</button>
+          <button class="template-button" type="button" data-template="meeting">Meeting decision</button>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-label">Workspace data</p>
+          <button class="sidebar-action" type="button" data-export-workspace>Export workspace</button>
+          <button class="sidebar-action" type="button" data-import-trigger>Import workspace</button>
+          <input class="visually-hidden" type="file" accept="application/json,.json" aria-label="Choose OpsDesk workspace backup" data-import-file />
+          <button class="sidebar-action" type="button" data-storage-guide>How storage works</button>
+          <button class="sidebar-action" type="button" data-show-archive>Archive <span data-archive-count>0</span></button>
+        </div>
+      </aside>
+
+      <section class="ops-main">
+        <section class="view-panel" data-view="focus">
+          <div class="view-heading">
+            <div>
+              <h2>Today</h2>
+              <p data-date-label></p>
+            </div>
+            <button class="button small" type="button" data-auto-focus>Build my top 3</button>
+          </div>
+
+          <div class="focus-grid">
+            <section class="work-section focus-list-section" aria-labelledby="top-focus-title">
+              <div class="work-section-header">
+                <div><h3 id="top-focus-title">Top focus</h3><p>Maximum three items</p></div>
+                <span class="count-badge" data-focus-capacity>0 / 3</span>
+              </div>
+              <div class="work-list" data-focus-list></div>
+            </section>
+
+            <section class="work-section" aria-labelledby="attention-title">
+              <div class="work-section-header">
+                <div><h3 id="attention-title">Needs attention</h3><p>Blocked, overdue, or critical</p></div>
+              </div>
+              <div class="work-list compact" data-attention-list></div>
+            </section>
+          </div>
+
+          <section class="work-section" aria-labelledby="next-title">
+            <div class="work-section-header">
+              <div><h3 id="next-title">Next up</h3><p>Active and planned work</p></div>
+              <button class="text-button" type="button" data-open-board>Open board</button>
+            </div>
+            <div class="work-list next-list" data-next-list></div>
+          </section>
+        </section>
+
+        <section class="view-panel" data-view="board" hidden>
+          <div class="view-heading board-heading">
+            <div><h2>Work board</h2><p>Drag items between stages or update them from the detail panel.</p></div>
+            <button class="button primary small" type="button" data-new-item>Add item</button>
+          </div>
+
+          <div class="board-toolbar">
+            <input class="search-input" type="search" aria-label="Search work items" placeholder="Search title, project, tags, or notes" data-search />
+            <select class="select" data-filter-priority aria-label="Filter by priority">
+              <option value="all">All priorities</option>
+              <option value="P1">P1 critical</option>
+              <option value="P2">P2 high</option>
+              <option value="P3">P3 normal</option>
+              <option value="P4">P4 low</option>
+            </select>
+            <select class="select" data-filter-type aria-label="Filter by type">
+              <option value="all">All types</option>
+              <option value="task">Tasks</option>
+              <option value="ticket">Tickets</option>
+              <option value="analytics">Analytics issues</option>
+              <option value="follow-up">Follow-ups</option>
+              <option value="decision">Decisions</option>
+            </select>
+            <button class="button small ghost" type="button" data-clear-filters>Clear</button>
+          </div>
+
+          <div class="kanban" data-board></div>
+        </section>
+
+        <section class="view-panel" data-view="todo" hidden>
+          <div class="view-heading">
+            <div><h2>To-do</h2><p>A fast checklist backed by the same work items used in Focus and Board.</p></div>
+          </div>
+          <form class="todo-capture" data-todo-form>
+            <label class="visually-hidden" for="todo-title">To-do title</label>
+            <input class="quick-input" id="todo-title" name="title" maxlength="140" placeholder="Add a concrete next action" required />
+            <label class="visually-hidden" for="todo-due">Due date</label>
+            <input class="input" id="todo-due" name="due" type="date" />
+            <button class="button primary" type="submit">Add</button>
+          </form>
+          <div class="todo-groups" data-todo-groups></div>
+        </section>
+
+        <section class="view-panel" data-view="updates" hidden>
+          <div class="view-heading">
+            <div><h2>Status update</h2><p>Generated from the work already captured in OpsDesk.</p></div>
+            <div class="button-row">
+              <button class="button small" type="button" data-copy-update>Copy update</button>
+              <button class="button small ghost" type="button" data-download-update>Download</button>
+            </div>
+          </div>
+
+          <div class="update-layout">
+            <section class="update-preview" aria-labelledby="update-preview-title">
+              <div class="update-controls">
+                <div>
+                  <h3 id="update-preview-title">Team update</h3>
+                  <p data-update-range-label></p>
+                </div>
+                <select class="select" data-update-range aria-label="Update time range">
+                  <option value="today">Today</option>
+                  <option value="week" selected>This week</option>
+                  <option value="all">All open work</option>
+                </select>
+              </div>
+              <div class="update-document" data-update-preview></div>
+            </section>
+
+            <section class="decision-panel" aria-labelledby="decision-log-title">
+              <div class="work-section-header">
+                <div><h3 id="decision-log-title">Decision log</h3><p>Decisions captured across work items</p></div>
+              </div>
+              <div class="decision-list" data-decision-list></div>
+            </section>
+          </div>
+        </section>
+      </section>
+
+      <aside class="detail-panel" data-detail-panel aria-label="Selected item details">
+        <div class="detail-empty" data-detail-empty>
+          <div>
+            <h2>No item selected</h2>
+            <p>Select work from Focus or Board to open its full context.</p>
+          </div>
+        </div>
+
+        <div class="detail-form" data-detail-form hidden>
+          <div class="detail-header">
+            <div>
+              <span class="status-chip tone-neutral" data-detail-type>Task</span>
+              <p data-detail-updated>Not saved yet</p>
+            </div>
+            <button class="icon-button" type="button" aria-label="Close details" title="Close details" data-close-detail>×</button>
+          </div>
+
+          <div class="detail-scroll">
+            <div class="field">
+              <label for="detail-title">Title</label>
+              <input class="detail-title-input" id="detail-title" name="title" maxlength="140" required />
+            </div>
+
+            <div class="field-grid three detail-select-grid">
+              <div class="field">
+                <label for="detail-status">Status</label>
+                <select class="select" id="detail-status" name="status">
+                  <option value="inbox">Inbox</option>
+                  <option value="planned">Planned</option>
+                  <option value="active">In progress</option>
+                  <option value="blocked">Blocked</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="detail-priority">Priority</label>
+                <select class="select" id="detail-priority" name="priority">
+                  <option value="P1">P1 critical</option>
+                  <option value="P2">P2 high</option>
+                  <option value="P3">P3 normal</option>
+                  <option value="P4">P4 low</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="detail-type">Type</label>
+                <select class="select" id="detail-type" name="type">
+                  <option value="task">Task</option>
+                  <option value="ticket">Ticket</option>
+                  <option value="analytics">Analytics issue</option>
+                  <option value="follow-up">Follow-up</option>
+                  <option value="decision">Decision</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div class="field"><label for="detail-project">Project / account</label><input class="input" id="detail-project" name="project" placeholder="e.g. Reporting migration" /></div>
+              <div class="field"><label for="detail-owner">Owner</label><input class="input" id="detail-owner" name="owner" placeholder="You or teammate" /></div>
+              <div class="field"><label for="detail-due">Due date</label><input class="input" id="detail-due" name="due" type="date" /></div>
+              <div class="field"><label for="detail-tags">Tags</label><input class="input" id="detail-tags" name="tags" placeholder="support, GA4, vendor" /></div>
+            </div>
+
+            <label class="focus-toggle"><input type="checkbox" name="focus" /> <span>Add to today's top focus</span></label>
+
+            <div class="field"><label for="detail-summary">Context</label><textarea class="textarea" id="detail-summary" name="summary" placeholder="What is happening and why it matters?"></textarea></div>
+            <div class="field"><label for="detail-next">Next action</label><textarea class="textarea compact-textarea" id="detail-next" name="nextAction" placeholder="The next concrete move"></textarea></div>
+            <div class="field"><label for="detail-blocker">Blocker</label><textarea class="textarea compact-textarea" id="detail-blocker" name="blocker" placeholder="Dependency, missing access, unclear decision"></textarea></div>
+
+            <details class="technical-context">
+              <summary>Technical context</summary>
+              <div class="technical-fields">
+                <div class="field"><label for="detail-expected">Expected</label><textarea class="textarea compact-textarea" id="detail-expected" name="expected"></textarea></div>
+                <div class="field"><label for="detail-actual">Actual</label><textarea class="textarea compact-textarea" id="detail-actual" name="actual"></textarea></div>
+                <div class="field"><label for="detail-links">Links / evidence</label><textarea class="textarea compact-textarea" id="detail-links" name="links" placeholder="Ticket, dashboard, query, recording, documentation"></textarea></div>
+              </div>
+            </details>
+
+            <section class="notes-section" aria-labelledby="notes-title">
+              <div class="notes-heading">
+                <h3 id="notes-title">Notes &amp; decisions</h3>
+                <select class="select note-kind" data-note-kind aria-label="Note type"><option value="note">Note</option><option value="decision">Decision</option></select>
+              </div>
+              <form class="note-composer" data-note-form>
+                <textarea class="textarea compact-textarea" name="note" aria-label="Note or decision text" placeholder="Add context, a meeting note, or a decision" required></textarea>
+                <button class="button small" type="submit">Add</button>
+              </form>
+              <div class="notes-list" data-notes-list></div>
+            </section>
+          </div>
+
+          <div class="detail-footer">
+            <span data-autosave-status>Saved locally</span>
+            <div class="button-row">
+              <button class="button small danger ghost" type="button" data-delete-selected>Delete</button>
+              <button class="button small ghost" type="button" data-archive-item>Archive</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <dialog class="modal" data-item-modal>
+    <form class="modal-form" data-item-form>
+      <div class="modal-header"><div><p class="eyebrow">New work</p><h2 data-modal-title>Add item</h2></div><button class="icon-button" type="button" aria-label="Close" data-modal-close>×</button></div>
+      <div class="modal-content">
+        <div class="field-grid">
+          <div class="field full"><label for="new-title">Title</label><input class="input" id="new-title" name="title" maxlength="140" required autofocus /></div>
+          <div class="field"><label for="new-type">Type</label><select class="select" id="new-type" name="type"><option value="task">Task</option><option value="ticket">Ticket</option><option value="analytics">Analytics issue</option><option value="follow-up">Follow-up</option><option value="decision">Decision</option></select></div>
+          <div class="field"><label for="new-priority">Priority</label><select class="select" id="new-priority" name="priority"><option value="P1">P1 critical</option><option value="P2">P2 high</option><option value="P3" selected>P3 normal</option><option value="P4">P4 low</option></select></div>
+          <div class="field"><label for="new-project">Project / account</label><input class="input" id="new-project" name="project" /></div>
+          <div class="field"><label for="new-due">Due date</label><input class="input" id="new-due" name="due" type="date" /></div>
+          <div class="field full"><label for="new-context">Context</label><textarea class="textarea" id="new-context" name="summary" placeholder="Enough context to make the next step obvious"></textarea></div>
+          <div class="field full"><label for="new-next">Next action</label><textarea class="textarea compact-textarea" id="new-next" name="nextAction"></textarea></div>
+        </div>
+      </div>
+      <div class="modal-footer"><button class="button ghost" type="button" data-modal-close>Cancel</button><button class="button primary" type="submit">Create item</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal data-modal" data-onboarding-modal>
+    <div class="modal-form">
+      <div class="modal-header"><div><p class="eyebrow">Before you start</p><h2>Your workspace lives in this browser.</h2></div></div>
+      <div class="modal-content storage-content">
+        <p class="storage-lead">OpsDesk has no account or cloud database. Every edit is autosaved to this browser's site storage, but that copy can be erased.</p>
+        <dl class="storage-facts">
+          <div><dt>Local autosave</dt><dd>Refreshes and normal browser restarts keep your work on this device.</dd></div>
+          <div><dt>What can remove it</dt><dd>Clearing website data, private browsing, browser cleanup, or moving to another browser or device.</dd></div>
+          <div><dt>Reliable continuation</dt><dd>Use Export report and choose Workspace backup, then import it later to merge with or replace a workspace.</dd></div>
+        </dl>
+        <p class="storage-note"><strong>Workspace backup is the complete restore file.</strong> Excel, CSV, and Markdown are reports for people, not restore files.</p>
+      </div>
+      <div class="modal-footer onboarding-actions">
+        <button class="button ghost" type="button" data-onboarding-import>Import backup</button>
+        <button class="button primary" type="button" data-onboarding-continue>Start locally</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal data-modal" data-storage-modal>
+    <div class="modal-form">
+      <div class="modal-header"><div><p class="eyebrow">Workspace data</p><h2>Local by design. Portable by backup.</h2></div><button class="icon-button" type="button" aria-label="Close storage guide" data-storage-close>×</button></div>
+      <div class="modal-content storage-content">
+        <p class="storage-lead">OpsDesk and SyncDesk autosave to <code>localStorage</code> for this site. Nothing is uploaded, and there is no server copy to recover after browser data is cleared.</p>
+        <dl class="storage-facts">
+          <div><dt>Export report</dt><dd>Choose Excel, CSV, or Markdown for reporting, or Workspace backup for a complete restorable copy of both apps.</dd></div>
+          <div><dt>Import workspace</dt><dd>Continue in this or another browser. Choose Merge to keep both workspaces or Replace to restore the file exactly.</dd></div>
+          <div><dt>Report formats</dt><dd>Useful for people, spreadsheets, and status sharing. They intentionally do not replace the complete workspace backup.</dd></div>
+        </dl>
+        <p class="storage-note"><strong>Best practice:</strong> export a Workspace backup after important changes and before clearing browser data or changing devices.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="button ghost" type="button" data-storage-close>Close</button>
+        <button class="button primary" type="button" data-export-report>Export report</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal data-modal" data-export-modal>
+    <form class="modal-form" data-export-form>
+      <div class="modal-header"><div><p class="eyebrow">Portable work</p><h2>Export report</h2></div><button class="icon-button" type="button" aria-label="Close export options" data-export-close>×</button></div>
+      <div class="modal-content export-content">
+        <p class="storage-lead">Choose a useful report for people or a complete backup for continuing the workspace later.</p>
+        <fieldset class="format-options">
+          <legend>Format</legend>
+          <label class="format-option"><input type="radio" name="format" value="xlsx" checked /><span><strong>Excel workbook</strong><small>Summary, work items, and notes on separate sheets</small></span><em>.xlsx</em></label>
+          <label class="format-option"><input type="radio" name="format" value="csv" /><span><strong>CSV table</strong><small>Flat work-item report for Sheets, BI tools, or analysis</small></span><em>.csv</em></label>
+          <label class="format-option"><input type="radio" name="format" value="md" /><span><strong>Markdown update</strong><small>Readable status report for email, Slack, or documentation</small></span><em>.md</em></label>
+          <label class="format-option"><input type="radio" name="format" value="json" /><span><strong>Workspace backup</strong><small>Complete restore file for OpsDesk and SyncDesk</small></span><em>.json</em></label>
+        </fieldset>
+        <div class="field" data-export-scope-field>
+          <label for="export-scope">Report scope</label>
+          <select class="select" id="export-scope" name="scope">
+            <option value="all">All work, including archive</option>
+            <option value="active">All active work</option>
+            <option value="open">Open work only</option>
+            <option value="completed">Completed work</option>
+            <option value="archived">Archive only</option>
+          </select>
+        </div>
+        <p class="storage-note export-note" data-export-note><strong>Excel is selected.</strong> The workbook includes a summary plus detailed work and notes sheets.</p>
+      </div>
+      <div class="modal-footer"><button class="button ghost" type="button" data-export-close>Cancel</button><button class="button primary" type="submit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>Export</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal data-modal" data-import-modal>
+    <div class="modal-form">
+      <div class="modal-header"><div><p class="eyebrow">Restore workspace</p><h2>How should this backup be imported?</h2></div><button class="icon-button" type="button" aria-label="Cancel import" data-import-close>×</button></div>
+      <div class="modal-content storage-content">
+        <p class="import-summary" data-import-summary></p>
+        <dl class="storage-facts compact">
+          <div><dt>Merge</dt><dd>Keep current work and add the backup. Matching item IDs are updated from the backup.</dd></div>
+          <div><dt>Replace</dt><dd>Remove the current workspace and restore only the items in this backup.</dd></div>
+        </dl>
+      </div>
+      <div class="modal-footer import-actions">
+        <button class="button ghost" type="button" data-import-close>Cancel</button>
+        <div class="button-row">
+          <button class="button" type="button" data-import-mode="merge">Merge</button>
+          <button class="button primary" type="button" data-import-mode="replace">Replace workspace</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal archive-modal" data-archive-modal>
+    <div class="modal-form">
+      <div class="modal-header"><div><p class="eyebrow">Workspace</p><h2>Archive</h2></div><button class="icon-button" type="button" aria-label="Close archive" data-archive-close>×</button></div>
+      <div class="modal-content"><div class="archive-list" data-archive-list></div></div>
+      <div class="modal-footer"><span></span><button class="button" type="button" data-archive-close>Done</button></div>
+    </div>
+  </dialog>
+
+  <dialog class="modal data-modal delete-modal" data-delete-modal>
+    <div class="modal-form">
+      <div class="modal-header"><div><p class="eyebrow danger-eyebrow">Permanent action</p><h2>Delete this item?</h2></div><button class="icon-button" type="button" aria-label="Cancel deletion" data-delete-close>×</button></div>
+      <div class="modal-content storage-content">
+        <p class="storage-lead" data-delete-summary></p>
+        <p class="delete-warning">This removes the item and its notes from this browser and from future exports. It cannot be restored from Archive.</p>
+      </div>
+      <div class="modal-footer"><button class="button ghost" type="button" data-delete-close>Cancel</button><button class="button danger" type="button" data-confirm-delete>Delete permanently</button></div>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status"></div>
+
+  <footer class="project-footer">
+    <span>OpsDesk by Andrej Glavnik · <span data-year></span></span>
+    <button class="footer-data-link" type="button" data-storage-guide>Browser storage · portable backup · no uploads</button>
+  </footer>
+
+  <script src="shared/project.js?v=20260719-sync"></script>
+  <script src="shared/workspace.js?v=20260719-sync"></script>
+  <script src="shared/vendor/xlsx.full.min.js?v=0.20.3"></script>
+  <script src="app.js?v=20260719-sync"></script>
+</body>
+</html>

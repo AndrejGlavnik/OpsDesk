@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f2f5f7" />
+  <meta name="description" content="OpsDesk case study: a local-first operations workbench designed and built by Andrej Glavnik for tasks, support cases, analytics issues, blockers, decisions, and updates." />
+  <meta property="og:title" content="OpsDesk Case Study | Andrej Glavnik" />
+  <meta property="og:description" content="How OpsDesk turns fragmented daily operations into focused, portable work." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://andrejglavnik.github.io/projects/opsdesk/case-study.html" />
+  <meta property="og:image" content="https://andrejglavnik.github.io/assets/img/opsdesk-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://andrejglavnik.github.io/projects/opsdesk/case-study.html" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/case-study.css?v=20260719" />
+  <title>OpsDesk Case Study | Andrej Glavnik</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"OpsDesk product case study","author":{"@type":"Person","name":"Andrej Glavnik","url":"https://andrejglavnik.github.io/"},"about":["support operations","project management","analytics operations","local-first software"],"description":"A product case study for a local-first operations workbench covering focus planning, tasks, blockers, decisions, reporting, and portable backup.","url":"https://andrejglavnik.github.io/projects/opsdesk/case-study.html","image":"https://andrejglavnik.github.io/assets/img/opsdesk-preview.png"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#case-content">Skip to case study</a>
+  <header class="case-header">
+    <div class="case-header-inner">
+      <a class="case-brand" href="https://andrejglavnik.github.io/"><span class="case-brand-mark">AG</span><span>Andrej Glavnik</span></a>
+      <nav class="case-nav" aria-label="Case study"><a href="#challenge">Challenge</a><a href="#system">System</a><a href="#decisions">Decisions</a><a href="#result">Result</a></nav>
+      <div class="case-actions">
+        <button class="case-icon-button" type="button" data-theme-toggle aria-label="Switch theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"></path><circle cx="12" cy="12" r="4"></circle></svg></button>
+        <a class="case-icon-button primary" href="./"><span>Open app</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"></path></svg></a>
+      </div>
+    </div>
+  </header>
+  <main id="case-content" tabindex="-1">
+    <section class="case-hero reveal">
+      <div>
+        <p class="case-eyebrow">Flagship product · local-first operations</p>
+        <h1>OpsDesk</h1>
+        <p class="case-lead">Keep the work moving when tickets, meetings, blockers, and decisions compete for attention.</p>
+        <p class="case-summary">OpsDesk is a browser-based workbench for customer-facing and analytics operations. It combines focus planning, a work board, to-dos, structured context, updates, reporting, and portable backup without an account or server.</p>
+        <div class="case-meta"><span><strong>Role</strong>Product design &amp; development</span><span><strong>Built with</strong>HTML, CSS, JavaScript, SheetJS</span><span><strong>Data</strong>Private browser storage</span></div>
+        <div class="case-buttons"><a class="case-button primary" href="./">Use OpsDesk</a><a class="case-button" href="https://github.com/AndrejGlavnik/OpsDesk" target="_blank" rel="noopener">Inspect source ↗</a></div>
+      </div>
+      <div class="case-preview"><img src="assets/opsdesk-preview.png" alt="OpsDesk focus view with top priorities, attention items, and work detail" width="1600" height="1000" /><span class="case-preview-label">A real, usable browser application. No mock data is required to operate it.</span></div>
+    </section>
+    <div class="case-main">
+      <section class="case-section" id="challenge">
+        <div class="case-section-head reveal"><div><p class="case-eyebrow">01 · Challenge</p><h2>Daily work loses context before it loses urgency.</h2></div><div><p>Tasks often start in chat, continue in a ticket, change in a meeting, and finish in a status update. A generic to-do list stores the title but drops the reason, next action, blocker, decision, and handoff.</p><p>The goal was a focused personal workspace that remains useful for support operations, analytics delivery, and project follow-through without introducing another account or backend.</p></div></div>
+        <div class="challenge-grid reveal"><article><span>Signal</span><h3>Too many capture points</h3><p>Tickets, notes, messages, and spreadsheets fragment the same piece of work.</p></article><article><span>Risk</span><h3>Context disappears</h3><p>A title alone cannot explain what happened, why it matters, or what must happen next.</p></article><article><span>Constraint</span><h3>Privacy first</h3><p>Operational notes must stay in the browser and remain portable through explicit backup.</p></article></div>
+      </section>
+      <section class="case-section" id="system">
+        <div class="case-section-head reveal"><div><p class="case-eyebrow">02 · System</p><h2>One item. Multiple useful views.</h2></div><div><p>A single structured work item powers Focus, Board, To-do, and Updates. Each view answers a different operational question while preserving one source of truth.</p></div></div>
+        <div class="system-map five reveal"><article class="system-node"><span>Capture</span><div><h3>Quick entry</h3><p>Task, issue, decision, or follow-up.</p></div></article><div class="system-arrow">→</div><article class="system-node"><span>Clarify</span><div><h3>Full context</h3><p>Owner, priority, blocker, due date, notes.</p></div></article><div class="system-arrow">→</div><article class="system-node"><span>Act</span><div><h3>Focus &amp; board</h3><p>Top three and status-based delivery.</p></div></article><div class="system-arrow">→</div><article class="system-node"><span>Communicate</span><div><h3>Updates</h3><p>Readable progress generated from work.</p></div></article><div class="system-arrow">→</div><article class="system-node"><span>Continue</span><div><h3>Portable backup</h3><p>JSON restore plus Excel, CSV, or Markdown report.</p></div></article></div>
+      </section>
+      <section class="case-section" id="decisions">
+        <div class="case-section-head reveal"><div><p class="case-eyebrow">03 · Product decisions</p><h2>Every control earns its place.</h2></div><div><p>The interface is intentionally dense enough for repeated work and quiet enough to scan. It avoids decorative dashboards, forced sign-in, and hidden export controls.</p></div></div>
+        <div class="decision-list reveal"><article><span>01</span><h3>Focus stays capped at three</h3><p>Prioritization becomes a decision instead of another unlimited list.</p></article><article><span>02</span><h3>Archive and delete are separate</h3><p>Completed history remains recoverable; permanent deletion requires explicit confirmation.</p></article><article><span>03</span><h3>Report and workspace are different</h3><p>Excel, CSV, and Markdown communicate work. JSON preserves the complete restorable workspace.</p></article><article><span>04</span><h3>Storage is explained in-product</h3><p>Users know browser clearing can remove local data and are prompted to keep portable backups.</p></article></div>
+      </section>
+      <section class="case-section" id="result">
+        <div class="case-section-head reveal"><div><p class="case-eyebrow">04 · Result</p><h2>A workbench, not a demo.</h2></div><div><p>OpsDesk is complete enough for everyday use: capture, edit, prioritize, move, archive, delete, report, back up, restore, and continue. It also shares its portable workspace with SyncDesk so operational issues can link to documented data connections.</p></div></div>
+        <div class="artifact-grid reveal"><article class="artifact"><span>Workflow</span><h3>Focus → Board → Update</h3><p>The same item moves from today's intent to execution and stakeholder-ready reporting without duplicate entry.</p></article><article class="artifact"><span>Portability</span><h3>No account required</h3><p>A full JSON workspace can be exported and imported later or in another browser. Reports remain available in human-readable formats.</p></article><article class="artifact"><span>Resilience</span><h3>Local-first by design</h3><p>The application works on GitHub Pages, has no analytics tracking, and keeps workspace data on the user's device.</p></article><article class="artifact"><span>Accessibility</span><h3>Keyboard and theme aware</h3><p>Semantic controls, visible focus, responsive layouts, light/dark mode, and reduced-motion support are built in.</p></article></div>
+      </section>
+    </div>
+    <section class="case-next"><div class="case-next-inner"><div><p class="case-eyebrow">Next flagship</p><h2>See how the data stays understandable.</h2></div><a class="case-next-link" href="https://andrejglavnik.github.io/projects/syncdesk/case-study.html">SyncDesk<br />case study →</a></div></section>
+  </main>
+  <footer class="case-footer"><span>© <span data-year></span> Andrej Glavnik</span><nav><a href="https://andrejglavnik.github.io/">Portfolio</a><a href="./">Open OpsDesk</a><a href="https://www.linkedin.com/in/andrejglavnik/" target="_blank" rel="noopener">LinkedIn</a></nav></footer>
+  <script src="assets/case-study.js?v=20260719" defer></script>
+</body>
+</html>
